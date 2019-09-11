@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">firstassigment</string>
+    <string name="hintmsg1">Enter value 1</string>
+    <string name="hintmsg2">Enter value 2</string>
+    <string name="buttonadd">Add</string>
+    <string name="buttonmul">Mul</string>
 </resources>
