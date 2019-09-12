@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String TXT = "whatiwant";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +31,10 @@ public class MainActivity extends AppCompatActivity {
                 (TextView) findViewById(R.id.textview1);
         textView.setTextSize(40);
         textView.setText(String.valueOf(result));
-        String message = editText1.getText().toString();
+
+        Intent intent = new Intent(
+                this, DisplayViewActivity.class);
+        String message = String.valueOf(result);
         intent.putExtra(TXT, message);
         startActivity(intent);
     }
