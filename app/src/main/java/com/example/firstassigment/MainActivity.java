@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
                 (TextView) findViewById(R.id.textview1);
         textView.setTextSize(40);
         textView.setText(String.valueOf(result));
+        String message = editText1.getText().toString();
+        intent.putExtra(TXT, message);
+        startActivity(intent);
     }
 
     public void mulOp(View view){
