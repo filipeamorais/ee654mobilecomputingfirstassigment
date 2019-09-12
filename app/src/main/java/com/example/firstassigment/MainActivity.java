@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 (EditText) findViewById(R.id.edittext2);
         int firstNumber = Integer.parseInt(editText1.getText().toString());
         int secondNumber = Integer.parseInt(editText2.getText().toString());
-        int result = firstNumber + secondNumber;
+        int result = firstNumber * secondNumber;
         //String message = editText.getText().toString();
         TextView textView =
                 (TextView) findViewById(R.id.textview1);
