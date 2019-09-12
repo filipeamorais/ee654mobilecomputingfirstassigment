@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addOp(View view){
+        //getting the values entered
         EditText editText1 =
                 (EditText) findViewById(R.id.edittext1);
         EditText editText2 =
@@ -26,12 +27,13 @@ public class MainActivity extends AppCompatActivity {
         int firstNumber = Integer.parseInt(editText1.getText().toString());
         int secondNumber = Integer.parseInt(editText2.getText().toString());
         int result = firstNumber + secondNumber;
-        //String message = editText.getText().toString();
-        TextView textView =
-                (TextView) findViewById(R.id.textview1);
-        textView.setTextSize(40);
-        textView.setText(String.valueOf(result));
+        //displaying at the same activity
+//        TextView textView =
+//                (TextView) findViewById(R.id.textview1);
+//        textView.setTextSize(40);
+//        textView.setText(String.valueOf(result));
 
+        //sending it to the other activity
         Intent intent = new Intent(
                 this, DisplayViewActivity.class);
         String message = String.valueOf(result);
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void mulOp(View view){
+        //getting the values entered
         EditText editText1 =
                 (EditText) findViewById(R.id.edittext1);
         EditText editText2 =
@@ -47,11 +50,18 @@ public class MainActivity extends AppCompatActivity {
         int firstNumber = Integer.parseInt(editText1.getText().toString());
         int secondNumber = Integer.parseInt(editText2.getText().toString());
         int result = firstNumber * secondNumber;
-        //String message = editText.getText().toString();
-        TextView textView =
-                (TextView) findViewById(R.id.textview1);
-        textView.setTextSize(40);
-        textView.setText(String.valueOf(result));
+        //displaying at the same activity
+//        TextView textView =
+//                (TextView) findViewById(R.id.textview1);
+//        textView.setTextSize(40);
+//        textView.setText(String.valueOf(result));
+
+        //sending it to the other activity
+        Intent intent = new Intent(
+                this, DisplayViewActivity.class);
+        String message = String.valueOf(result);
+        intent.putExtra(TXT, message);
+        startActivity(intent);
     }
 
 
