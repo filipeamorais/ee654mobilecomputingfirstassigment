@@ -17,13 +17,33 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addOp(View view){
-        EditText editText =
+        EditText editText1 =
                 (EditText) findViewById(R.id.edittext1);
-        String message = editText.getText().toString();
+        EditText editText2 =
+                (EditText) findViewById(R.id.edittext2);
+        int firstNumber = Integer.parseInt(editText1.getText().toString());
+        int secondNumber = Integer.parseInt(editText2.getText().toString());
+        int result = firstNumber + secondNumber;
+        //String message = editText.getText().toString();
         TextView textView =
                 (TextView) findViewById(R.id.textview1);
         textView.setTextSize(40);
-        textView.setText(message);
+        textView.setText(String.valueOf(result));
+    }
+
+    public void mulOp(View view){
+        EditText editText1 =
+                (EditText) findViewById(R.id.edittext1);
+        EditText editText2 =
+                (EditText) findViewById(R.id.edittext2);
+        int firstNumber = Integer.parseInt(editText1.getText().toString());
+        int secondNumber = Integer.parseInt(editText2.getText().toString());
+        int result = firstNumber + secondNumber;
+        //String message = editText.getText().toString();
+        TextView textView =
+                (TextView) findViewById(R.id.textview1);
+        textView.setTextSize(40);
+        textView.setText(String.valueOf(result));
     }
 
 
